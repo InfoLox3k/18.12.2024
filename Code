@@ -4,7 +4,9 @@ df_excel = pd.read_excel('datas.xlsx')
 df_elements = df_excel.sample(n=10)
 print(df_elements)
 df_sum = 0
+count = 0
 df_ev = df_excel.get('evaluations inf/20').tolist()
 for item in df_ev:
     df_sum += item
-print(df_sum)
+    count += 1
+print(df_sum/count)
